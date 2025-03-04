@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Banasthali Arogya Seva - Settings</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-stethoscope"></i>
+        <h1>Banasthali Arogya Seva</h1>
+      </div>
+      <nav>
+        <a href="/">Dashboard</a>
+        <a href="/page2.html">Reports</a>
+        <a href="/settings.html" class="active">Settings</a>
+      </nav>
+      <div class="user-profile">
+        <span>Dr. Smith</span>
+        <div class="avatar">
+          <i class="fas fa-user-md"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h2>Settings</h2>
+        <p>Manage your account and application preferences</p>
+      </section>
+      
+      <section class="settings-container">
+        <div class="settings-sidebar">
+          <ul class="settings-nav">
+            <li class="settings-nav-item active" data-target="profile-settings">
+              <i class="fas fa-user-circle"></i>
+              <span>Profile Settings</span>
+            </li>
+            <li class="settings-nav-item" data-target="general-settings">
+              <i class="fas fa-cog"></i>
+              <span>General Settings</span>
+            </li>
+            <li class="settings-nav-item" data-target="notification-settings">
+              <i class="fas fa-bell"></i>
+              <span>Notifications</span>
+            </li>
+            <li class="settings-nav-item" data-target="security-settings">
+              <i class="fas fa-shield-alt"></i>
+              <span>Security</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="settings-content">
+          <div id="profile-settings" class="settings-panel active">
+            <h3>Profile Settings</h3>
+            
+            <form class="settings-form">
+              <div class="profile-photo-section">
+                <div class="current-photo">
+                  <i class="fas fa-user-md"></i>
+                </div>
+                <div class="photo-actions">
+                  <button type="button" class="secondary-btn">
+                    <i class="fas fa-upload"></i> Upload Photo
+                  </button>
+                  <button type="button" class="text-btn">
+                    <i class="fas fa-trash"></i> Remove
+                  </button>
+                </div>
+                <p class="photo-hint">Recommended: Square image, at least 200x200px</p>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" value="John" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" value="Smith" required>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="dr.smith@banasthaliarogya.org" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" value="+91 98765 12345" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" value="General Medicine">
+              </div>
+              
+              <div class="form-group">
+                <label for="degree">Degree</label>
+                <input type="text" id="degree" value="MBBS, MD (Medicine)">
+              </div>
+              
+              <div class="form-group">
+                <label for="registration">Medical Registration Number</label>
+                <input type="text" id="registration" value="MCI-12345">
+              </div>
+              
+              <div class="form-group">
+                <label for="bio">Professional Bio</label>
+                <textarea id="bio" rows="4">Dr. John Smith is a general medicine specialist with over 10 years of experience in student healthcare. Specializes in preventive care and management of common health issues among young adults.</textarea>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="primary-btn">Save Changes</button>
+                <button type="button" class="secondary-btn">Cancel</button>
+              </div>
+            </form>
+          </div>
+          
+          <div id="general-settings" class="settings-panel">
+            <h3>General Settings</h3>
+            
+            <form class="settings-form">
+              <div class="form-group">
+                <label for="language">Language</label>
+                <select id="language">
+                  <option value="en" selected>English</option>
+                  <option value="hi">Hindi</option>
+                  <option value="bn">Bengali</option>
+                  <option value="ta">Tamil</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="time-format">Time Format</label>
+                <select id="time-format">
+                  <option value="12" selected>12-hour (AM/PM)</option>
+                  <option value="24">24-hour</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="date-format">Date Format</label>
+                <select id="date-format">
+                  <option value="mdy" selected>MM/DD/YYYY</option>
+                  <option value="dmy">DD/MM/YYYY</option>
+                  <option value="ymd">YYYY/MM/DD</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label>Theme</label>
+                <div class="theme-options">
+                  <div class="theme-option active">
+                    <div class="theme-preview light-theme"></div>
+                    <span>Light</span>
+                  </div>
+                  <div class="theme-option">
+                    <div class="theme-preview dark-theme"></div>
+                    <span>Dark</span>
+                  </div>
+                  <div class="theme-option">
+                    <div class="theme-preview system-theme"></div>
+                    <span>System</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group toggle-group">
+                <label for="auto-logout">Auto Logout After Inactivity</label>
+                <div class="toggle-switch">
+                  <input type="checkbox" id="auto-logout" checked>
+                  <label for="auto-logout" class="toggle-label"></label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="logout-time">Logout After</label>
+                <select id="logout-time">
+                  <option value="15">15 minutes</option>
+                  <option value="30" selected>30 minutes</option>
+                  <option value="60">1 hour</option>
+                  <option value="120">2 hours</option>
+                </select>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="primary-btn">Save Changes</button>
+                <button type="button" class="secondary-btn">Reset to Default</button>
+              </div>
+            </form>
+          </div>
+          
+          <div id="notification-settings" class="settings-panel">
+            <h3>Notification Settings</h3>
+            
+            <form class="settings-form">
+              <div class="notification-group">
+                <h4>Email Notifications</h4>
+                
+                <div class="form-group toggle-group">
+                  <label for="email-appointments">Appointment Reminders</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="email-appointments" checked>
+                    <label for="email-appointments" class="toggle-label"></label>
+                  </div>
+                </div>
+                
+                <div class="form-group toggle-group">
+                  <label for="email-reports">New Medical Reports</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="email-reports" checked>
+                    <label for="email-reports" class="toggle-label"></label>
+                  </div>
+                </div>
+                
+                <div class="form-group toggle-group">
+                  <label for="email-system">System Updates</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="email-system">
+                    <label for="email-system" class="toggle-label"></label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="notification-group">
+                <h4>In-App Notifications</h4>
+                
+                <div class="form-group toggle-group">
+                  <label for="app-appointments">Appointment Alerts</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="app-appointments" checked>
+                    <label for="app-appointments" class="toggle-label"></label>
+                  </div>
+                </div>
+                
+                <div class="form-group toggle-group">
+                  <label for="app-reports">Report Notifications</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="app-reports" checked>
+                    <label for="app-reports" class="toggle-label"></label>
+                  </div>
+                </div>
+                
+                <div class="form-group toggle-group">
+                  <label for="app-messages">Message Notifications</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="app-messages" checked>
+                    <label for="app-messages" class="toggle-label"></label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="primary-btn">Save Changes</button>
+                <button type="button" class="secondary-btn">Reset to Default</button>
+              </div>
+            </form>
+          </div>
+          
+          <div id="security-settings" class="settings-panel">
+            <h3>Security Settings</h3>
+            
+            <form class="settings-form">
+              <div class="security-group">
+                <h4>Change Password</h4>
+                
+                <div class="form-group">
+                  <label for="current-password">Current Password</label>
+                  <input type="password" id="current-password">
+                </div>
+                
+                <div class="form-group">
+                  <label for="new-password">New Password</label>
+                  <input type="password" id="new-password">
+                </div>
+                
+                <div class="form-group">
+                  <label for="confirm-password">Confirm New Password</label>
+                  <input type="password" id="confirm-password">
+                </div>
+                
+                <div class="password-requirements">
+                  <p>Password must:</p>
+                  <ul>
+                    <li>Be at least 8 characters long</li>
+                    <li>Include at least one uppercase letter</li>
+                    <li>Include at least one number</li>
+                    <li>Include at least one special character</li>
+                  </ul>
+                </div>
+                
+                <button type="button" class="primary-btn">Update Password</button>
+              </div>
+              
+              <div class="security-group">
+                <h4>Two-Factor Authentication</h4>
+                
+                <div class="form-group toggle-group">
+                  <label for="two-factor">Enable Two-Factor Authentication</label>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="two-factor">
+                    <label for="two-factor" class="toggle-label"></label>
+                  </div>
+                </div>
+                
+                <p class="security-note">Two-factor authentication adds an extra layer of security to your account by requiring a verification code in addition to your password.</p>
+                
+                <button type="button" class="secondary-btn">Set Up Two-Factor Authentication</button>
+              </div>
+              
+              <div class="security-group">
+                <h4>Session Management</h4>
+                
+                <p>You are currently logged in on 2 devices.</p>
+                
+                <div class="session-list">
+                  <div class="session-item">
+                    <div class="session-info">
+                      <i class="fas fa-laptop"></i>
+                      <div class="session-details">
+                        <p class="session-device">Windows PC - Chrome</p>
+                        <p class="session-location">New Delhi, India (Current)</p>
+                        <p class="session-time">Active now</p>
+                      </div>
+                    </div>
+                    <button class="text-btn" disabled>This Device</button>
+                  </div>
+                  
+                  <div class="session-item">
+                    <div class="session-info">
+                      <i class="fas fa-mobile-alt"></i>
+                      <div class="session-details">
+                        <p class="session-device">iPhone 13 - Safari</p>
+                        <p class="session-location">New Delhi, India</p>
+                        <p class="session-time">Last active: 2 hours ago</p>
+                      </div>
+                    </div>
+                    <button class="text-btn text-danger">Log Out</button>
+                  </div>
+                </div>
+                
+                <button type="button" class="secondary-btn text-danger">Log Out of All Other Devices</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Banasthali Arogya Seva. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

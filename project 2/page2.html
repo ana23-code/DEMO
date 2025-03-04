@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Banasthali Arogya Seva - Reports</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-stethoscope"></i>
+        <h1>Banasthali Arogya Seva</h1>
+      </div>
+      <nav>
+        <a href="/">Dashboard</a>
+        <a href="/page2.html" class="active">Reports</a>
+        <a href="/settings.html">Settings</a>
+      </nav>
+      <div class="user-profile">
+        <span>Dr. Smith</span>
+        <div class="avatar">
+          <i class="fas fa-user-md"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <h2>Medical Reports</h2>
+        <p>Access patient medical reports with secure OTP verification</p>
+      </section>
+      
+      <section class="reports-container">
+        <div class="report-access-card">
+          <h3>Patient Report Access</h3>
+          <p>Enter patient ID and verify with OTP to access medical reports</p>
+          
+          <form id="report-access-form" class="report-form">
+            <div class="form-group">
+              <label for="patient-id">Patient ID</label>
+              <input type="text" id="patient-id" placeholder="e.g., BAS-2023-0458" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="patient-phone">Patient Phone Number</label>
+              <input type="tel" id="patient-phone" placeholder="Enter registered phone number" required>
+            </div>
+            
+            <button type="button" id="send-otp-btn" class="primary-btn">Send OTP</button>
+            
+            <div id="otp-section" class="form-group otp-section hidden">
+              <label for="otp-input">Enter OTP</label>
+              <div class="otp-input-container">
+                <input type="text" class="otp-input" maxlength="1" data-index="1">
+                <input type="text" class="otp-input" maxlength="1" data-index="2">
+                <input type="text" class="otp-input" maxlength="1" data-index="3">
+                <input type="text" class="otp-input" maxlength="1" data-index="4">
+                <input type="text" class="otp-input" maxlength="1" data-index="5">
+                <input type="text" class="otp-input" maxlength="1" data-index="6">
+              </div>
+              <p class="otp-timer">OTP expires in: <span id="timer">05:00</span></p>
+              <button type="button" id="verify-otp-btn" class="primary-btn">Verify & Access Report</button>
+            </div>
+          </form>
+        </div>
+        
+        
+          
+          
+         
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Banasthali Arogya Seva. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
